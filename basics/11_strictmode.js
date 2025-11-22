@@ -117,12 +117,12 @@ checkThis();
    ------------------------------------------------------------
 */
 
-let num = 10;
-try {
-  delete num; // ERROR in strict mode
-} catch (e) {
-  console.log("ERROR (delete variable):", e.message);
-}
+// let num = 10;
+// try {
+//   delete num; // ERROR in strict mode
+// } catch (e) {
+//   console.log("ERROR (delete variable):", e.message);
+// }
 
 
 
@@ -131,11 +131,11 @@ try {
    ------------------------------------------------------------
 */
 
-try {
-  let x = 010; // ERROR (octal not allowed)
-} catch (e) {
-  console.log("ERROR (octal literal):", e.message);
-}
+// try {
+//   let x = 010; // ERROR (octal not allowed)
+// } catch (e) {
+//   console.log("ERROR (octal literal):", e.message);
+// }
 
 
 
