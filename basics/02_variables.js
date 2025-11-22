@@ -56,8 +56,10 @@ console.log(x);
      - when you need a variable whose value will change
 */
 
+/* console.log(b);  // ERROR: ReferenceError: cannot access before initialization */
+
 let b = 10;
-/* let b = 20; // ERROR: cannot re-declare */
+/* let b = 20; // ERROR: SyntaxError: cannot re-declare */
 
 b = 30; // allowed
 
@@ -66,7 +68,7 @@ b = 30; // allowed
   console.log(y); // 40
 }
 
-/* console.log(y); // ERROR: y is block-scoped */
+/* console.log(y); // ERROR: ReferenceError: y is block-scoped */
 
 
 
@@ -85,15 +87,15 @@ b = 30; // allowed
 */
 
 const c = 100;
-/* c = 200; // ERROR: cannot reassign */
-/* const d; // ERROR: must initialize immediately */
+/* c = 200; // ERROR: TypeError: cannot reassign */
+/* const d; // ERROR: SyntaxError: must initialize immediately */
 
 {
   const z = 70;
   console.log(z);
 }
 
-/* console.log(z); // ERROR: block-scoped */
+/* console.log(z); // ERROR: ReferenceError: z is block-scoped */
 
 
 
