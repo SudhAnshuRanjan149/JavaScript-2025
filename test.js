@@ -1,12 +1,2 @@
-const c = 100;
-/* c = 200; // ERROR: cannot reassign */
-/* const d; // ERROR: must initialize immediately */
-
-
-console.log(z);
-
-const z = 70;
-{
-
-  console.log(z);
-}
+console.log(0 && "hello");   // 0  (stops at first falsy value)
+console.log("hi" && 123);    // 123 (returns last truthy value)
