@@ -13,6 +13,12 @@
 */
 
 
+/*
+  Important Note:
+  - var becomes a property of window in browser.
+  - let and const DO NOT become window properties.
+*/
+
 
 /* ============================================================
    1. var — FUNCTION-SCOPED, OLD & AVOIDED IN MODERN JS
