@@ -1,11 +1,3 @@
-const obj = {
-  value: 42,
-  method: function() {
-    (() => {
-      // arrow function captures `this` lexically (from method)
-      console.log("Value with arrow + closure:", this.value);
-    })()
-  }
-};
+const [first, ...others] = [1, 2, 3, 4];
 
-obj.method();
+console.log(first, others);

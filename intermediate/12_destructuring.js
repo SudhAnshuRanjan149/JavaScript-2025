@@ -42,8 +42,8 @@ console.log(x, z);  // 1, 3
    3. DEFAULT VALUES
    ============================================================ */
 
-const [p = 99, q = 77] = [50];
-console.log(p, q); // 50, 77
+const [p1 = 99, q = 77] = [50];
+console.log(p1, q); // 50, 77
 
 
 
@@ -63,9 +63,9 @@ console.log("swapped:", n1, n2); // 10, 5
    5. REST OPERATOR IN ARRAY DESTRUCTURING
    ============================================================ */
 
-const [first, ...others] = [1, 2, 3, 4];
+const [first1, ...others] = [1, 2, 3, 4];
 
-console.log(first, others);
+console.log(first1, others);
 /*
   others = [2,3,4]
 */
