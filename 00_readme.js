@@ -61,6 +61,7 @@ const jsRoadmap = {
     "Error Handling",
     "Debouncing & Throttling",
     "Event Delegation",
+    "Event Bubbling & Capturing",
     "Custom Events",
   ],
 
