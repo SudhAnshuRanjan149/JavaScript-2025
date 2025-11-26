@@ -190,11 +190,11 @@ console.log(false && expensive());
 const val = null;
 
 // First ?? runs:
-const result1 = val ?? "fallback" || "other";
+const result1 = (val ?? "fallback") || "other";
 console.log(result1);   // "fallback"
 
 // First || runs:
-const result2 = val || undefined ?? "yes";
+const result2 = (val || undefined) ?? "yes";
 console.log(result2);   // "yes"
 
 
