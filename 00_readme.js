@@ -33,7 +33,7 @@ const jsRoadmap = {
     "Function Currying",
     "Higher Order Functions",
     "Callback Functions",
-    "Array Methods (map, filter, reduce, every, some)",
+    "Array Methods (map, filter, reduce, every, some, sort, etc.)",
     "Objects & Object Methods",
     "Destructuring",
     "Spread & Rest Operators",
