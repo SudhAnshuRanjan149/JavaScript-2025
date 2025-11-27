@@ -66,6 +66,7 @@ const jsRoadmap = {
     "Custom Events",
     "Thunk Functions",
     "Polysfills & Transpilation",
+    "BOM in Browser",
   ],
 
   very_advanced: [
