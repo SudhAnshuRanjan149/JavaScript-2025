@@ -67,6 +67,7 @@ const jsRoadmap = {
     "Thunk Functions",
     "Polysfills & Transpilation",
     "BOM in Browser",
+    "Regular Expressions in JS",
   ],
 
   very_advanced: [
