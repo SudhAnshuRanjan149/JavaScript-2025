@@ -63,6 +63,7 @@ const jsRoadmap = {
     "Event Delegation",
     "Event Bubbling & Capturing",
     "Custom Events",
+    "Thunk Functions",
   ],
 
   very_advanced: [
