@@ -41,6 +41,7 @@ const jsRoadmap = {
     "Default Parameters",
     "Short-circuiting (||, &&, ??)",
     "Modules (import/export)",
+    "Undeclared vs Undefined vs Not Defined"
   ],
 
   advanced: [
