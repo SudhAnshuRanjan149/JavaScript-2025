@@ -64,6 +64,7 @@ const jsRoadmap = {
     "Event Bubbling & Capturing",
     "Custom Events",
     "Thunk Functions",
+    "Polysfills & Transpilation",
   ],
 
   very_advanced: [
