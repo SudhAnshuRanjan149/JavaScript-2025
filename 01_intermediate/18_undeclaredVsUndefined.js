@@ -355,132 +355,8 @@ if (typeof someVar === "undefined") {
 
 
 
-/*
-  NULL vs UNDEFINED vs UNDECLARED vs NOT DEFINED — GREAT DETAIL
-  -------------------------------------------------------------
-  These appear similar, but they are COMPLETELY DIFFERENT concepts
-  in JavaScript. Interviewers LOVE asking this.
-
-  We will explain ALL FOUR:
-
-      1) undefined
-      2) null
-      3) undeclared
-      4) not defined
-
-  With examples, rules, pitfalls, and best practices.
-*/
-
-
-
 /* ============================================================
-   1. WHAT IS undefined?
-   ============================================================
-*/
-/*
-  ✔ A primitive value.
-  ✔ Means:
-        "Variable IS declared, but it has NO VALUE yet."
-
-  ✔ undefined is assigned:
-        - Automatically by JS
-        - To uninitialized variables
-        - To missing function arguments
-        - To missing object properties
-        - As default return value of functions with no return
-*/
-
-let a;
-console.log(a); // undefined  (declared but not assigned)
-
-function f(x) { console.log(x); }
-f(); // undefined (x not provided)
-
-const obj = {};
-console.log(obj.name); // undefined (property does not exist)
-
-
-
-/* ============================================================
-   2. WHAT IS null?
-   ============================================================
-*/
-/*
-  ✔ A primitive value.
-  ✔ Means:
-        "Intentional absence of a value."
-  ✔ Assigned manually by the developer.
-
-  Use cases:
-      - Resetting a variable
-      - Representing "no data", "not found"
-*/
-
-let user = null;
-console.log(user); // null
-
-user = { name: "Alice" };
-user = null; // explicitly empty again
-
-
-
-/* ============================================================
-   3. null vs undefined (KEY DIFFERENCES)
-   ============================================================
-*/
-/*
-  ✔ undefined → JS engine assigned (default)
-  ✔ null      → developer assigned (intentional)
-
-  SIMPLE MODEL:
-      undefined = not assigned yet
-      null      = assigned to be empty
-*/
-
-
-
-/* ------------------------------------------------------------
-   typeof behavior:
-   ------------------------------------------------------------ */
-
-console.log(typeof undefined); // "undefined"
-console.log(typeof null);      // "object"  // JS bug but standardized
-
-
-
-/* ------------------------------------------------------------
-   Equality:
-   ------------------------------------------------------------ */
-
-console.log(undefined == null);  // true   (both represent absence)
-console.log(undefined === null); // false  (different types)
-
-
-
-/* ============================================================
-   4. WHAT IS UNDECLARED?
-   ============================================================
-*/
-/*
-  ✔ "Undeclared variable" means:
-        - It has NOT been declared anywhere (no var/let/const)
-
-  ✔ Accessing it → ReferenceError
-*/
-
-console.log(x); // ❌ ReferenceError: x is not defined
-
-/*
-  IMPORTANT:
-    "Undeclared" is NOT the same as undefined.
-    Undefined means declared but uninitialized.
-    Undeclared means NEVER declared.
-*/
-
-
-
-/* ============================================================
-   5. WHAT IS "NOT DEFINED"?
+   11. WHAT IS "NOT DEFINED"?
    ============================================================
 */
 /*
@@ -509,7 +385,7 @@ console.log(foo); // ❌ ReferenceError: foo is not defined
 
 
 /* ============================================================
-   6. CLEAR DIFFERENCE TABLE (MOST IMPORTANT)
+   12. CLEAR DIFFERENCE TABLE (MOST IMPORTANT)
    ============================================================ */
 /*
   +--------------+---------------------------+------------------------------+
@@ -525,7 +401,7 @@ console.log(foo); // ❌ ReferenceError: foo is not defined
 
 
 /* ============================================================
-   7. SPECIAL CASES YOU MUST KNOW FOR INTERVIEW
+   13. SPECIAL CASES YOU MUST KNOW FOR INTERVIEW
    ============================================================
 */
 
@@ -591,7 +467,7 @@ test(); // undefined
 
 
 /* ============================================================
-   8. BEST PRACTICES
+   14. BEST PRACTICES
    ============================================================ */
 /*
   ✔ Use strict equality (===) always, avoid ==.
@@ -607,7 +483,7 @@ test(); // undefined
 
 
 /* ============================================================
-   9. IMPORTANT INTERVIEW Q&A
+   15. IMPORTANT INTERVIEW Q&A
    ============================================================ */
 
 /*
@@ -637,7 +513,7 @@ test(); // undefined
 
 
 /* ============================================================
-   10. CHEAT SHEET (REMEMBER THIS FOR INTERVIEWS)
+   16. CHEAT SHEET (REMEMBER THIS FOR INTERVIEWS)
    ============================================================
 */
 /*

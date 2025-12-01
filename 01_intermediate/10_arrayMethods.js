@@ -337,7 +337,7 @@ console.log("join custom:", arr15.join("-"));
 
 console.log("Array.from:", Array.from("ABC"));
 
-
+// Array.from: [ 'A', 'B', 'C' ]
 
 /* ============================================================
    24. isArray() — check if something is array
@@ -345,7 +345,7 @@ console.log("Array.from:", Array.from("ABC"));
 
 console.log("isArray:", Array.isArray([1, 2, 3]));
 
-
+// isArray: true
 
 /* ============================================================
    25. keys(), values(), entries() — iterators
@@ -362,7 +362,7 @@ for (let v of arr16.values()) console.log(v);
 console.log("entries:");
 for (let [i, val] of arr16.entries()) console.log(i, val);
 
-
+ 
 
 /* ============================================================
    SUMMARY TABLE
@@ -458,6 +458,8 @@ console.log(arr17.toString());
 const arr18 = [1000, new Date("2024-01-01")];
 
 console.log(arr18.toLocaleString());
+
+
 /*
   toLocaleString():
     - returns string formatted using user's locale settings

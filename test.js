@@ -1,3 +1,6 @@
-const [first, ...others] = [1, 2, 3, 4];
+const arr18 = [1000, new Date("2024-01-01")];
 
-console.log(first, others);
+console.log(arr18.toLocaleString());
+console.log(arr18.toString()); 
+
+ 
