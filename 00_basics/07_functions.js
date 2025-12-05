@@ -3,7 +3,7 @@
   -------------------------------------------------------------------
   Functions are reusable blocks of code.
   JS has 3 main ways to create functions:
-      1. Function Declaration
+      1. Function Declaration aka Function Statement
       2. Function Expression
       3. Arrow Function
   Each has different behavior regarding:
@@ -15,18 +15,68 @@
 
 
 /* ============================================================
-   1. FUNCTION DECLARATION
+   1. FUNCTION DECLARATION (aka FUNCTION STATEMENT)
    ============================================================
    - Uses the `function` keyword.
    - Hoisted completely (you can call before declaring).
    - Has its own `this` context (dynamic binding).
 */
 
-greet();  // works (HOISTED)
+/* ------------------------------------------------------------
+   1.a FUNCTION STATEMENT (aka Function Declaration)
+
+   Theory:
+     - "Function Statement" is another name for a Function Declaration.
+     - Syntax: `function name(params) { ... }` placed as a standalone
+       statement in the surrounding scope.
+     - Fully hoisted: the function name and body are available before
+       the line where it appears in source code (you can call it earlier).
+     - The declared name is bound in the surrounding scope (function or
+       global), which makes it ideal for top-level, reusable functions.
+
+   When to use:
+     - Declaring primary, standalone functions where hoisting and a
+       clear name are desirable (e.g. library/public API functions).
+
+   Quick syntax summary:
+     function add(a, b) {
+       return a + b;
+     }
+
+   Simple examples below demonstrate usage and hoisting.
+*/
+
+// Example — basic function statement and usage
+greet(); // Works because function statements are hoisted
 
 function greet() {
-  console.log("Hello from a Function Declaration");
+  console.log("Hello from a Function Statement / Declaration");
 }
+
+// Example — returning values and parameters
+function add(a, b) {
+  return a + b;
+}
+
+console.log("2 + 3 =", add(2, 3));
+
+// Hoisting behaviour demonstration (call before declaration)
+try {
+  console.log('double(4) =>', double(4)); // works
+} catch (err) {
+  console.log('hoist error', err.message);
+}
+
+function double(n) {
+  return n * 2;
+}
+
+/*
+  Note: ES6 introduced block-level semantics for function declarations
+  in some environments (function inside `{ ... }` may be block-scoped).
+  For predictable scoping inside blocks prefer function expressions or
+  use declarations at top-level of the enclosing function/module.
+*/
 
 /*
   Characteristics:
@@ -253,7 +303,6 @@ console.log(sum(1, 2, 3, 4)); // 10
    | Arrow Function         | No      | No        | () => {}       | Short, callbacks, array ops |
 
 */
-
 
 
 /* ============================================================
