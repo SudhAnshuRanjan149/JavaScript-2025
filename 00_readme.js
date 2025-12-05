@@ -72,6 +72,8 @@ const jsRoadmap = {
     "Regular Expressions in JS",
     "New Keyword",
     "Typed Arrays",
+    "Proxy & Reflect",
+    "Memory Management & Garbage Collection",
   ],
 
   very_advanced: [
