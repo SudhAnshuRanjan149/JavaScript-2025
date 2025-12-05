@@ -43,6 +43,7 @@ const jsRoadmap = {
     "Modules (import/export)",
     "Undeclared vs Undefined vs Not Defined",
     "Deep vs Shallow Copy",
+    "Collection Types (Map, Set, WeakMap, WeakSet)",
   ],
 
   advanced: [
