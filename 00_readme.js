@@ -41,7 +41,8 @@ const jsRoadmap = {
     "Default Parameters",
     "Short-circuiting (||, &&, ??)",
     "Modules (import/export)",
-    "Undeclared vs Undefined vs Not Defined"
+    "Undeclared vs Undefined vs Not Defined",
+    "Deep vs Shallow Copy",
   ],
 
   advanced: [
@@ -68,7 +69,8 @@ const jsRoadmap = {
     "Polyfills & Transpilation",
     "BOM in Browser",
     "Regular Expressions in JS",
-    "New Keyword"
+    "New Keyword",
+    "Typed Arrays",
   ],
 
   very_advanced: [
