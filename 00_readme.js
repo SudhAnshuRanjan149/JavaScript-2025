@@ -87,6 +87,12 @@ const jsRoadmap = {
     "Performance Optimization",
     "Memory Leaks & Profiling",
     "V8 Engine Internals",
+    "Mutation Observers",
+    "Just-In-Time (JIT) Compilation",
+    "Meta Programming",
+    "Decorators",
+    "Internationalization (i18n)",
+    "Advanced Patterns (Module, Revealing Module, Observer, etc.)",
   ],
 
   expert: [
