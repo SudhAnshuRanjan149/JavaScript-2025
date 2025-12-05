@@ -96,6 +96,7 @@ const jsRoadmap = {
     "WebAssembly Basics",
     "Web Workers",
     "Security Best Practices (XSS, CSRF, CORS)",
+    "Accessibility (a11y)"
   ],
 
   expert: [
