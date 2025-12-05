@@ -291,9 +291,96 @@ btn.addEventListener("click", function (e) {
 */
 
 
+/* ============================================================
+   11. CASES WHERE BUBBLING / CAPTURING DOES NOT APPLY
+   ============================================================
+   Not all DOM events bubble. Also, some events behave differently
+   across Shadow DOM boundaries or are retargeted. Here are common
+   cases you should know about.
+
+   1) Events that do NOT bubble (common list):
+        - focus, blur              (use focusin/focusout to get bubbling)
+        - load, unload, beforeunload
+        - error                    (does not bubble from elements)
+        - mouseenter, mouseleave   (use mouseover/mouseout to bubble)
+        - pointerenter, pointerleave
+        - scroll                   (does not bubble)
+
+   2) Alternatives that do bubble:
+        - focusin / focusout  — bubble equivalents of focus/blur
+        - mouseover / mouseout — bubble equivalents of mouseenter/leave
+
+   3) Shadow DOM / composed events:
+        - Events inside shadow roots may be "retargeted" when seen
+          outside the shadow boundary. Some events have `composed`
+          set to false by default and won't cross shadow boundaries.
+
+   4) Programmatic and default prevention:
+        - Calling element.dispatchEvent(...) will follow event's
+          defined bubbling behavior (bubbles: true/false) based on
+          the Event init options.
+        - stopPropagation() and stopImmediatePropagation() (covered
+          earlier) explicitly stop propagation even for bubbling events.
+
+   Examples (assume elements exist in the page):
+
+   — focus vs focusin (focus does NOT bubble)
+*/
+
+parent.addEventListener("focus", function () {
+  console.log("parent focus listener (will NOT run when child focuses)");
+});
+
+parent.addEventListener("focusin", function () {
+  console.log("parent focusin listener (bubbles from child)");
+});
+
+child.addEventListener("focus", function () {
+  console.log("child focused");
+});
+
+// programmatically focus the child to demonstrate behaviour (if focusable)
+try {
+  if (typeof child.focus === "function") child.focus();
+} catch (err) {}
+
+
+/*
+  Output when child is focused:
+    - "child focused"
+    - "parent focusin listener (bubbles from child)"
+    - NOT: "parent focus listener (will NOT run...)"
+
+  — mouseenter / mouseover difference (mouseenter does NOT bubble)
+*/
+
+parent.addEventListener("mouseenter", () =>
+  console.log("parent mouseenter (does NOT bubble from child)")
+);
+
+child.addEventListener("mouseenter", () => console.log("child mouseenter"));
+
+/*
+  If the mouse enters the child, you will see "child mouseenter" but
+  NOT the parent's mouseenter. For a bubbling alternative use
+  mouseover / mouseout on the parent and inspect event.target.
+
+  — load / error / scroll
+    - window.addEventListener('load', ...) is the proper use; load
+      doesn't bubble from elements up the tree.
+    - scroll events do not bubble; listen on the element that scrolls
+      (or use capturing on ancestors where supported).
+
+  — Shadow DOM note:
+    Events with `composed: false` will not cross shadow boundaries.
+    Use `composed: true` or the appropriate composed events when
+    communicating out of a shadow root.
+*/
+
+
 
 /* ============================================================
-   11. SUMMARY
+   12. SUMMARY
    ============================================================
    ✔ Event flow has 3 phases:
         1) Capturing  (top → down)
