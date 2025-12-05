@@ -48,7 +48,7 @@ const jsRoadmap = {
     "Prototype",
     "Prototype Chain",
     "this Keyword (binding, call, apply, bind)",
-    "Constructor Functions",
+    "Constructor Function",
     "ES6 Classes",
     "Inheritance (ES6 + Prototype)",
     "Encapsulation, Polymorphism (OOP concepts)",
@@ -65,9 +65,10 @@ const jsRoadmap = {
     "Event Bubbling & Capturing",
     "Custom Events",
     "Thunk Functions",
-    "Polysfills & Transpilation",
+    "Polyfills & Transpilation",
     "BOM in Browser",
     "Regular Expressions in JS",
+    "New Keyword"
   ],
 
   very_advanced: [

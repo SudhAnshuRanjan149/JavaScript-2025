@@ -192,9 +192,40 @@ console.log(msg);
 */
 
 
+/* ============================================================
+10. 'in' keyword (checking property existence)
+   ============================================================
+   - Checks if a property exists in an object.
+*/
+
+const person = { name: "Alice", age: 30 };
+
+if ("age" in person) {
+  console.log("Age is defined");
+} else {
+  console.log("Age is not defined");
+}
+
+/*
+  Useful for:
+    - verifying optional properties
+    - avoiding undefined errors
+*/
+
+// Example for Arrays
+const arr = [10, 20, 30];
+
+if (2 in arr) {
+  console.log("Index 2 exists in the array");
+} else {
+  console.log("Index 2 does not exist in the array");
+} 
+
+// output: Index 2 exists in the array
+
 
 /* ============================================================
-   10. SUMMARY
+   11. SUMMARY
    ============================================================
 
    if condition:
@@ -211,4 +242,8 @@ console.log(msg);
 
    ternary:
        short form of if-else
+
+   in keyword:
+       checks if a property exists in an object
+       
 */
