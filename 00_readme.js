@@ -93,6 +93,9 @@ const jsRoadmap = {
     "Decorators",
     "Internationalization (i18n)",
     "Advanced Patterns (Module, Revealing Module, Observer, etc.)",
+    "WebAssembly Basics",
+    "Web Workers",
+    "Security Best Practices (XSS, CSRF, CORS)",
   ],
 
   expert: [
