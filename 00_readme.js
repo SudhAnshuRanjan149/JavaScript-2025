@@ -102,13 +102,13 @@ const jsRoadmap = {
   ],
 
   expert: [
-    "Progressive Web Apps (PWAs)",
-    "Functional Programming in JS",
     "Reactive Programming Concepts",
     "State Machines",
     "Abstract Syntax Trees (AST)",
     "Writing Compilers/Transpilers Basics",
     "Creating Custom Bundlers",
+    "Progressive Web Apps (PWAs)",
+    "Functional Programming in JS",
   ],
 
   browser: [
