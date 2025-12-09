@@ -97,7 +97,6 @@ const jsRoadmap = {
     "ES6 Features",
     "ES7, ES8, ES9, ES10, ES11, ES12, ES13, ES14 Features",
     "Bitwise Operators",
-    "Event Listeners in JS",
     "Concurrency Model in JS",
     "General Definations & Concepts", // Enumerable, Configurable, Writable, composition in JS, Promisification, Dynamic Typing, Inversion of Control, Shadowing and Illegal Shadowing, Mark-and-Sweep Algorithm, Inlining, Copy Elision, Inline Caching, Iterable 
   ],
@@ -113,6 +112,7 @@ const jsRoadmap = {
   ],
 
   browser: [
+    "Event Listeners in JS",
     "Advanced DOM Manipulation",
     "Accessibility (a11y)",
     "Web APIs (Canvas, WebGL, etc.)",
