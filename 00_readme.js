@@ -93,34 +93,27 @@ const jsRoadmap = {
     "Decorators",
     "Internationalization (i18n)",
     "WebAssembly Basics",
-    "Web Workers",
-    "Security Best Practices (XSS, CSRF, CORS)",
-    "Accessibility (a11y)"
+    "Web Workers"
   ],
 
   expert: [
-    "Design Patterns (Factory, Singleton, Observer, etc.)",
-    "Architecture Patterns (MVC, MVVM, Flux, Redux)",
-    "Solid Principles in JS",
-    "Domain-Driven Design (DDD) Basics",
-    "Event-Driven Architecture",
-    "Microservices with JS",
-    "Serverless Architecture",
-    "Clean Architecture",
-    "JAMstack Overview",
-    "GraphQL with JS",
     "Progressive Web Apps (PWAs)",
-    "Advanced Testing (TDD, BDD, Mocks, Stubs)",
-    "CI/CD for JS Projects",
-    "Monorepos with Lerna/Yarn Workspaces",
-    "Performance Monitoring & Analytics",
-    "Advanced NPM/Yarn Usage",
     "Functional Programming in JS",
     "Reactive Programming Concepts",
     "State Machines",
     "Abstract Syntax Trees (AST)",
     "Writing Compilers/Transpilers Basics",
     "Creating Custom Bundlers",
+  ],
+
+  browser: [
+    "Accessibility (a11y)",
+    "Web APIs (Canvas, WebGL, etc.)",
+    "Service Workers", // refer -> very_advanced -> Service Workers
+    "WebSockets", // refer -> very_advanced -> WebSockets
+    "WebRTC",
+    "Intersection Observer",
+    "Resize Observer"
   ],
 
   ecosystem: [
